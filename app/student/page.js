@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import StudentNavbar from './components/StudentNavbar';
 import DashboardCard from './components/DashboardCard';
-import QuestionUploadForm from './components/QuestionUploadForm';
-import HistoryTable from './components/HistoryTable';
+import QuestionUploadForm from './components/Questionuploadform';
+import HistoryTable from './components/Historytable';
 
 export default function StudentDashboard() {
   const [history, setHistory] = useState([]);
