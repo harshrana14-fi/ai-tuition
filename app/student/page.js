@@ -22,7 +22,7 @@ export default function StudentDashboard() {
 
   const handleToolSelect = (toolKey) => {
     setSelectedTool(toolKey);
-    setSidebarOpen(false); // auto close on click
+    setSidebarOpen(false); // auto close on tool click
   };
 
   useEffect(() => {
@@ -47,12 +47,12 @@ export default function StudentDashboard() {
         <main className="max-w-7xl mx-auto px-4 pt-24 pb-10">
           <h1 className="text-3xl font-bold text-blue-800 mb-6">Hello, Harsh 👋</h1>
 
-          {/* Render selected smart tool */}
-          {selectedTool === 'exam' && <ExamWhisperer />}
-          {selectedTool === 'lang' && <LanguageBuddy />}
-          {selectedTool === 'parent' && <ParentVoiceAI />}
+          {/* ✅ Render selected smart tool with onBack */}
+          {selectedTool === 'exam' && <ExamWhisperer onBack={() => setSelectedTool(null)} />}
+          {selectedTool === 'lang' && <LanguageBuddy onBack={() => setSelectedTool(null)} />}
+          {selectedTool === 'parent' && <ParentVoiceAI onBack={() => setSelectedTool(null)} />}
 
-          {/* Default Dashboard */}
+          {/* ✅ Default Dashboard View */}
           {!selectedTool && (
             <>
               <div className="grid md:grid-cols-4 gap-6 mb-10">
