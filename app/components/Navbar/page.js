@@ -67,8 +67,8 @@ export default function Navbar() {
           <Link href="/" className="block text-gray-700 hover:text-blue-600">Home</Link>
           <Link href="#features" className="block text-gray-700 hover:text-blue-600">Features</Link>
           <Link href="#contact" className="block text-gray-700 hover:text-blue-600">Contact</Link>
-          <Link href="/app/auth" className="block text-gray-700 hover:text-blue-600">Student Login/Register</Link>
-          <Link href="/app/teacher" className="block text-gray-700 hover:text-blue-600">Teacher Login/Register</Link>
+          <Link href="/auth" className="block text-gray-700 hover:text-blue-600">Student Login/Register</Link>
+          <Link href="/teacher/components" className="block text-gray-700 hover:text-blue-600">Teacher Login/Register</Link>
           <Link
             href="/ask"
             className="block mt-2 px-4 py-2 bg-blue-600 text-white text-center rounded-full hover:bg-blue-700"
