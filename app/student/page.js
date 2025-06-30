@@ -10,6 +10,8 @@ import HistoryTable from '@/app/student/components/Historytable';
 import ExamWhisperer from '@/app/student/components/edcno/ExamWhisperer';
 import LanguageBuddy from '@/app/student/components/edcno/LanguageBuddy';
 import ParentVoiceAI from '@/app/student/components/edcno/ParentAssistant';
+import GoalSetter from './components/edcno/GoalSetter';
+import QuizZone from './components/edcno/QuizZone';
 
 export default function StudentDashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -51,6 +53,8 @@ export default function StudentDashboard() {
           {selectedTool === 'exam' && <ExamWhisperer onBack={() => setSelectedTool(null)} />}
           {selectedTool === 'lang' && <LanguageBuddy onBack={() => setSelectedTool(null)} />}
           {selectedTool === 'parent' && <ParentVoiceAI onBack={() => setSelectedTool(null)} />}
+          {selectedTool === 'goal' && <GoalSetter onBack={() => setSelectedTool(null)} />}
+          {selectedTool === 'quiz' && <QuizZone onBack={() => setSelectedTool(null)} />}
 
           {/* ✅ Default Dashboard View */}
           {!selectedTool && (

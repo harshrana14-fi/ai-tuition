@@ -14,7 +14,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <img src="/aibg.png" alt="Logo" className="h-10 w-auto" />
-          <span className="text-2xl font-bold text-blue-600">AI Tuition</span>
+          <span className="text-2xl font-bold text-blue-600">EduFox</span>
         </Link>
 
         {/* Desktop Menu */}
