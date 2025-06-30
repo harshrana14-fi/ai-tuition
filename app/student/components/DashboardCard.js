@@ -1,13 +1,13 @@
+'use client';
+
 import React from 'react';
 
 export default function DashboardCard({ title, value, icon }) {
   return (
-    <div className="bg-gradient-to-br from-blue-500 to-indigo-600 text-white rounded-xl p-6 shadow-lg flex items-center justify-between">
-      <div>
-        <h4 className="text-sm font-semibold opacity-80">{title}</h4>
-        <p className="text-2xl font-bold mt-1">{value}</p>
-      </div>
-      <span className="text-4xl">{icon}</span>
+    <div className="bg-white shadow-md rounded-xl p-4 text-center hover:shadow-lg transition duration-300">
+      <div className="text-3xl mb-2">{icon}</div>
+      <h3 className="text-lg font-medium text-blue-700">{title}</h3>
+      <p className="text-2xl font-bold text-gray-800">{value}</p>
     </div>
   );
 }

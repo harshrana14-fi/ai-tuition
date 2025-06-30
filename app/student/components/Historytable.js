@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 export default function HistoryTable({ history }) {
@@ -7,22 +9,18 @@ export default function HistoryTable({ history }) {
 
   return (
     <div className="overflow-x-auto">
-      <table className="min-w-full border rounded-md overflow-hidden">
-        <thead className="bg-blue-600 text-white">
-          <tr>
-            <th className="text-left px-4 py-2">Question</th>
-            <th className="text-left px-4 py-2">File</th>
-            <th className="text-left px-4 py-2">Submitted</th>
-            <th className="text-left px-4 py-2">AI Response</th>
+      <table className="min-w-full bg-white border rounded-lg">
+        <thead>
+          <tr className="bg-blue-100 text-blue-700">
+            <th className="py-2 px-4 text-left">Question</th>
+            <th className="py-2 px-4 text-left">Time</th>
           </tr>
         </thead>
         <tbody>
-          {history.map((entry, idx) => (
-            <tr key={idx} className="border-b">
-              <td className="px-4 py-2 max-w-sm truncate">{entry.question}</td>
-              <td className="px-4 py-2">{entry.fileName}</td>
-              <td className="px-4 py-2">{entry.date}</td>
-              <td className="px-4 py-2 text-green-600">{entry.aiResponse}</td>
+          {history.map((item, index) => (
+            <tr key={index} className="border-t">
+              <td className="py-2 px-4">{item.text}</td>
+              <td className="py-2 px-4 text-sm text-gray-600">{item.time}</td>
             </tr>
           ))}
         </tbody>
